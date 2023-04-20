@@ -78,6 +78,21 @@
     width: 85vw;
     list-style: none;
 }
+
+@media only screen and (max-width: 767px) {
+    /* insira suas regras CSS aqui para telas menores que 768px */
+    .containerGet ul {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .formulario {
+        width: 80%;
+    }
+    .date {
+        width: 50%;
+    }
+  }
+
+
 .containerGet ul li{
     margin: 0 auto;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
@@ -85,15 +100,37 @@
     border-radius: 15px;
 }
 
-/*Delete*/
-.btnR {
-    height: 6vh;
-    width: 6vw;
-    cursor: pointer;
-    background-color:#f05c52;
-    border-radius: 10px;
-    font-size: 15px;
-    font-weight: 599;
-    color: aliceblue;
-
+/*Menu*/
+nav {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    transition: all 1s ease-in-out;
 }
+
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 80%;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 2%;
+}
+
+nav ul li {
+    padding: 10px;
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 7px;
+    transition: all ease-in-out .2s;
+}
+
+nav ul li:hover {
+    background-color: #20E392;
+    color: black;
+}
+

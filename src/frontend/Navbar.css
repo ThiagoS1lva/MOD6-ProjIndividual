@@ -1,0 +1,13 @@
+.transparent {
+    background-color: rgba(0, 0, 0, 0.883);
+}
+  .color {
+    background-color: #000000; /* substitua pela cor desejada */
+}
+
+.teste {
+    padding-bottom: 1%;
+}
+.ul {
+    transition: 240ms linear; 
+}

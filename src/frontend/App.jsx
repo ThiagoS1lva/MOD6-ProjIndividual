@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import styles from './App.module.css';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from 'react-bootstrap/Button';
+import './Navbar.css'
 
 function MeuFormulario() {
   const [nome, setNome] = useState('');
@@ -9,9 +11,26 @@ function MeuFormulario() {
   const [data_nascimento, setDataNascimento] = useState('');
   const [mensagem, setMensagem] = useState('');
   const [Coletores, setColetores] = useState([]);
+  const [isTransparent, setTransparent] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  },[])
+
+  function handleScroll () {
+    const scrollTop = window.pageYOffset;
+    
+    if(scrollTop > 0) {
+      setTransparent(true);
+    } else if (scrollTop === 0){
+      setTransparent(false);
+    }
+  }
+
+
 
   //Timer para sumir a mensagem
-  
   useEffect(() => {
     let timer;
     if (mensagem) {
@@ -24,6 +43,7 @@ function MeuFormulario() {
   //Metodo post
   const handleSubmit = async (event) => {
     event.preventDefault();
+    //Tempo pra pagina dar reload
     setTimeout(() => {
       window.location.reload();
     }, 500);
@@ -76,6 +96,14 @@ function MeuFormulario() {
 
   return (
     <div>
+      <nav className={isTransparent ? "transparent" : "color"}>
+        <ul className={`ul ${isTransparent ? "teste" : ""}`}>
+          <li>Home</li>
+          <li>Sobre nos</li>
+          <li>Contato</li>
+          <li>Login</li>
+        </ul>
+      </nav>
       <div className={styles.container}>
         <p className={styles.titulo}>Cadastro de Coletores</p>
         {mensagem && <p>{mensagem}</p>}
@@ -113,7 +141,7 @@ function MeuFormulario() {
                 <p><b>E-mail:</b> {Coletor.email}</p>
                 <p><b>CPF:</b> {Coletor.cpf}</p>
                 <p><b>Data de Nascimento:</b> {Coletor.data_nascimento}</p>
-                <button className={styles.btnR} onClick={() => handleRemover(Coletor.id)}>Remover</button>
+                <Button variant='danger' onClick={() => handleRemover(Coletor.id)}>Remover</Button>
               </li>
             ))}
           </ul>
