@@ -20,7 +20,7 @@ Este é um simples aplicativo web para cadastro e remoção de coletores, usando
 3. Execute o comando `npm install` para instalar as dependências necessárias.
 4. Execute o comando `npm run dev` para iniciar o aplicativo web em modo de desenvolvimento.
 5. Execute o comando `npm start` para iniciar o servidor backend.
-5. Abra o navegador e acesse o endereço `http://localhost:3000` para visualizar o aplicativo.
+5. Abra o navegador e acesse o endereço `http://localhost:5173` para visualizar o aplicativo.
 
 ## Observações
 
