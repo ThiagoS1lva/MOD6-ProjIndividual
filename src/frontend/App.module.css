@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Anuphan&display=swap');
+
+* {
+    font-family: 'Anuphan', sans-serif;
+}
+
+/*Post*/
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+
+.titulo {
+    font-size: 35px;
+    font-weight: bold;
+    text-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    font-size: 20px;
+    padding: 2%;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.input {
+    margin-bottom: 5%;
+    border-radius: 10px;
+    height: 5vh;
+    font-size: 18px;
+    transition: all 0.2s ease-in-out;
+}
+
+.input:focus {
+    background-color: rgb(214, 212, 212);
+}
+
+.formulario button {
+    height: 15%;
+    width: 40%;
+    margin: 0 auto;
+    border-radius: 12px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.formulario button:hover {
+    background-color: black;
+    color: white;
+}
+
+.date {
+    width: 10vw;
+    height: 4vh;
+    border: 1px solid black;
+    margin-bottom: 5%;
+    border-radius: 3px;
+}
+
+/*Get*/
+.containerGet {
+    display: Flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.containerGet ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    padding-left: 0;
+    width: 85vw;
+    list-style: none;
+}
+.containerGet ul li{
+    margin: 0 auto;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    padding: 5%;
+    border-radius: 15px;
+}
+
+/*Delete*/
+.btnR {
+    height: 6vh;
+    width: 6vw;
+    cursor: pointer;
+    background-color:#f05c52;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 599;
+    color: aliceblue;
+
+}
